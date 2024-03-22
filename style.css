@@ -1,0 +1,177 @@
+/*
+display flex: organiza divs dentro de uma div principal uma do lado da outra.
+display flex organiza qualquer coisa.
+border = borda
+justify-content: center => centraliza as divs
+aling-itens => centraliza verticalmente
+height => altura
+*/
+
+/* resetar o style do navegador dando estilo geral usando * assim deixando tudo padronizado para não ocorrer bugs... */
+
+/*    
+            box-sizing: border-box;
+     significa que ele conta e medida das bordas contando a altura e largura.
+ */
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Open Sans", sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ecf0f1;
+}
+
+.content{
+    border-radius: 15px;
+    background-color: white;
+    width: 960px;
+    height: 50%;
+    justify-content: space-between;
+    /*  justify-content: space-between;
+        separa os conteudos dentro de divs*/
+    align-items: center;
+    position: relative;
+}
+
+.content::before{
+    content: "";
+    position: absolute;
+    background-color: #58af9b;
+    width: 40%;
+    height: 100%;
+}
+
+.title{
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.title-primary{
+    color: white;
+}
+
+.title-second{
+    color: #58af9b;
+}
+
+.description{
+    font: 14px;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+.description-primary{
+    color: white;
+}
+
+.description-second{
+    color: #7f8c8d;
+}
+
+.btn{
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 10px;
+    padding: 10px 50px;
+    /* padding voce determina o tamanho que você deseja em torno de um relogio
+    você determina em seguencia o tamanho do topo direita baixo esquerda
+    como acima determinamos so dois tamanhos entao ele levara em consideração que a primeira informação é de quanto mede da base até o topo como se fosse a altura e a segunda informação como se fosse a largura do lado direito ao lado esquerdo. */
+    cursor: pointer;
+    font-weight: bold;
+    width: 150px;
+    align-self: center;
+    border: none;
+}
+
+.btn-primary{
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+.btn-second{
+    background-color: #58af9b;
+    border: 1px solid #58af9b;
+}
+
+.btn-second:hover{
+    background-color: white;
+    border: 1px solid #58af9b;
+    color: #58af9b;
+}
+
+.btn-primary:hover{
+    background-color: #fff;
+    color: #58ef58;
+}
+
+.first-content{
+    display: flex;
+}
+
+.first-column{
+    text-align: center;
+    flex: 1 0 auto;
+    z-index: 10;
+}
+
+.second-column{
+    flex: 2 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list-social-media{
+    display: flex;
+    list-style-type: none;
+}
+
+.item-social-media{
+    border: 1px solid #bdc3c7;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+}
+
+.item-social-media a{
+    color: #95a5a6;
+}
+
+
+.form{
+    display: flex;
+    flex-direction: column;
+    /*     flex-direction: column;
+         direciona o fluxo que a gente deseja assim pois colocando em colunas.
+ */
+    width: 55%;
+
+}
+
+.form input{
+    height: 45px;
+    border: none;
+    background-color: #ecf0f1;
+}
+
+.second-content{
+    position: absolute;
+    display: none;
+
+}
