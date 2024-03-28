@@ -149,6 +149,10 @@ body{
     text-align: center;
 }
 
+.item-social-media:not(:first-child){
+    margin-left: 10px;
+}
+
 .item-social-media a{
     color: #95a5a6;
 }
@@ -168,6 +172,19 @@ body{
     height: 45px;
     border: none;
     background-color: #ecf0f1;
+    width: 100%;
+}
+
+.label-input{
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    margin: 8px;
+}
+
+.icon-modify{
+    color: #7f8c8d;
+    padding: 0 5px;
 }
 
 .second-content{
